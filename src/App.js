@@ -12,7 +12,7 @@ import TransactionHistory from './components/TransactionHistory/TransactionHisto
 
 export default function App() {
   return (
-    <div>
+    <div className="container">
       <Profile
         name={user.name}
         tag={user.tag}
