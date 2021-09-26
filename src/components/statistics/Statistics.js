@@ -1,16 +1,16 @@
 import PropTypes from 'prop-types';
-import './statistics.css';
+import s from './Statistics.module.css';
 
 export default function Statistics({ title = 'Upload stats', stats }) {
   return (
-    <section className="statistics">
-      {title && <h2 className="title">{title}</h2>}
+    <section className={s.statistics}>
+      {title && <h2 className={s.title}>{title}</h2>}
 
-      <ul className="stat-list">
+      <ul className={s.statList}>
         {stats.map(elt => (
-          <li className="item" key={elt.id}>
-            <span className="label">{elt.label}</span>
-            <span className="percentage">{elt.percentage}</span>
+          <li className={s.item} key={elt.id}>
+            <span className={s.label}>{elt.label}</span>
+            <span className={s.percentage}>{elt.percentage}</span>
           </li>
         ))}
       </ul>
